@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import Container from './Container';
 
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
 
   render() { 
   return (
-    <p>Hello World!</p>
+    <Container></Container>
   )
   };
 }
