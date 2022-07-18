@@ -5,16 +5,11 @@ import GuessLetter from './guessLetter';
 class GuessLetterRow extends Component {
     state = {  } 
     render() { 
+        
         return (
 
-
             <div className='guessLetterRow'>
-
-                <GuessLetter></GuessLetter>
-                <GuessLetter></GuessLetter>
-                <GuessLetter></GuessLetter>
-                <GuessLetter></GuessLetter>
-                <GuessLetter></GuessLetter>
+                {this.props.bundle.map(e => <GuessLetter data={e} key={e.id} id={e.id}></GuessLetter>)}
             </div>
         );
     }

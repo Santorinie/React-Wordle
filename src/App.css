@@ -1,6 +1,10 @@
 :root {
   --initial-letter-border-color: white;
   --global-text-color: white;
+  --letter-present-color: rgb(216, 195, 160);
+  --letter-correct-color: rgb(194,231,180);
+  --letter-absent-color: rgb(144,141,151);
+
 }
 
 .App {
@@ -94,24 +98,29 @@ body{
   }
 
   .textInput{
-    border: none;
-    width: 70%;
-    height: 50%;
-    border-radius: inherit;
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
     background-color: transparent;
     color: var(--global-text-color);
     
   }
 
-  .textInput:focus{
-    border: none;
-    outline: none;
-    caret-color: pink;
 
+  .Empty{
+    border-color: var(--initial-letter-border-color);
   }
+
+  .Absent{
+    border-color: var(--letter-absent-color);
+  }
+
+  .LetterPresent{
+    border-color: var(--letter-present-color);
+  }
+
+  .LetterCorrect{
+    border-color: var(--letter-correct-color);
+  }
+
+
 
 .App-logo {
   height: 40vmin;
