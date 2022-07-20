@@ -4,11 +4,28 @@ class GuessLetter extends Component {
     state = { 
      } 
     render() { 
-        const {id, key, letter, status} = this.props.data;
+        const {letter, status} = this.props;
+        // 0 = Empty, 1 = Wrong letter, 2 = Wrong place, 3 = Correct letter
+        let stateString;
+        switch (status) {
+            case 1:
+                stateString = 'Absent';
+                break;
+                case 2:
+                    stateString = 'LetterPresent';
+                    break;
+                    case 3:
+                        stateString = 'LetterCorrect';
+                        break;
+        
+            default:
+                stateString = 'Empty';
+                break;
+        }
+        //console.log(stateString);
         return (
-            <div className={'guessLetter'+' '+status} >
-                <h1 className='textInput'>{letter}</h1>
-
+            <div className={'guessLetter'+' '+stateString} >
+                {letter}
             </div>
         );
     }
