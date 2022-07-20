@@ -7,7 +7,6 @@ class GuessLetter extends Component {
         const {letter, status} = this.props;
         // 0 = Empty, 1 = Wrong letter, 2 = Wrong place, 3 = Correct letter
         let stateString;
-        console.log('status',status);
         switch (status) {
             case 1:
                 stateString = 'Absent';

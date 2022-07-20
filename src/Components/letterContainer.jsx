@@ -6,12 +6,21 @@ class letterContainer extends Component {
 
     
     render() { 
+        const {keyboardLetters,onClick, letterState} = this.props;
+        const map = [
+            {num: 3, cname: 'LetterCorrect'},
+            {num: 2, cname: 'LetterPresent'},
+            {num: 1, cname: 'Absent'},
+            {num: 0, cname: 'Empty'}
+        ];
+       
+       
 
 
         return (
         <div className='letterContainer'>{
-            this.props.keyboardLetters.map(e => <div key={this.props.keyboardLetters.indexOf(e)} className='lettersRow'>
-            {e.map(l => <div key={this.props.keyboardLetters[this.props.keyboardLetters.indexOf(e)].indexOf(l)} className={l.length == 1 ? 'letter' : 'letter specialChar'}>{l}</div>)}
+            keyboardLetters.map((e,index) => <div key={index} className='lettersRow'>
+            {e.map((l,index) => <div key={index} onClick={() => onClick(l)} className={(l.length == 1 ? 'letter' : 'letter specialChar')+' '+(map.find(x => x.num == letterState.find(y => y.letter == l).status)).cname}>{l}</div>)}
             </div>)
         }</div>
         );

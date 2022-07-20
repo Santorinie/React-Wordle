@@ -15,10 +15,11 @@
 }
 
 body{
-  background-image: url('./Images/background.webp');
+  /* background-image: url('./Images/background.webp'); */
   background-size:cover;
   background-repeat: no-repeat;
-  background-size: 200%;
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('./Images/background.webp');
+  background-position: center top;
   
   
 }
