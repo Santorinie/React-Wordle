@@ -153,6 +153,7 @@ body{
     border: 1px solid var(--initial-letter-border-color);
     color: var(--global-text-color);
     border-radius: 10px;
+    text-transform: uppercase;
   }
 
   .textInput{
