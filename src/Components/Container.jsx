@@ -11,21 +11,17 @@ class Container extends Component {
             ['Q','W','E','R','T','Y','U','I','O','P'],
             ['A','S','D','F','G','H','J','K','L'],
             ['Enter','Z','X','C','V','B','N','M','⌫']
-        ],
-        key: ''
+        ]
+        
      } 
 
      render() { 
-         const handleLetter = (e) =>{
-             console.log("Valami hiba tortent",e);
-             this.setState({key: e});
-         };
-        
+
         return (
             <div className='gameContainer'>
                 <HeaderContainer></HeaderContainer>
-                <PlayboardContainer data={this.state.key}></PlayboardContainer>
-                <LetterContainer onChange={handleLetter} keyboardLetters={this.state.keyboardLetters}></LetterContainer>
+                <PlayboardContainer ></PlayboardContainer>
+                <LetterContainer keyboardLetters={this.state.keyboardLetters}></LetterContainer>
             </div>
             
 

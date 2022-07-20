@@ -17,20 +17,21 @@ const PlayboardContainer = (props) => {
     let [ended, setEnded] = useState(false);
     let fetchedEntity = cloneDeep(entity);
     const [word, setWord] = useState(words[Math.floor(Math.random()*words.length)]);
-    let enteredLetter = props.data;
+    const [usedLetters, setUsedLetters] = useState([]);
 
 
         
     function Evaluate(){
         
         const letters = fetchedEntity[selectedRow].map(e => e.letter);
-
+        setUsedLetters(letters);
 
         for (let index = 0; index < letters.length; index++) {
             
             if (letters[index] == word[index]) {
                 
                 fetchedEntity[selectedRow][index].status = states[3];
+                
             }
             else if(word.includes(letters[index])){
                 
